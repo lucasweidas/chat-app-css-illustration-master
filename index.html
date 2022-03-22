@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <!-- Phone Container -->
+    <div id="phone">
+      <!-- App Header -->
+      <div class="app-header">
+        <div class="card">
+          <span class="card__arrow-left"></span>
+          <section class="card-user">
+            <h2>Samuel Green</h2>
+            <p>Available to Walk</p>
+            <img src="images/avatar.jpg" alt="Samuel Green">
+          </section>
+          <span class="card__ellipsis"></span>
+        </div>
+      </div>
+      <!-- App Messages -->
+      <div class="app-chat">
+        <p class="friend message">That sounds great. I’d be happy with that.</p>
+        <p class="friend message">Could you send over some pictures of your dog, please?</p>
+        <div class="user images">
+          <img src="images/dog-image-1.jpg" alt="">
+          <img src="images/dog-image-2.jpg" alt="">
+          <img src="images/dog-image-3.jpg" alt="">
+        </div>
+        <p class="user message">Here are a few pictures. She’s a happy girl!</p>
+        <p class="user message">Can you make it?</p>
+        <p class="friend message">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+        <div class="friend bet">
+          <input type="radio" name="inp-radio" id="inp-radio-01">
+          <label for="inp-radio-01">30 minute walk</label>
+          <span>$29</span>
+        </div>
+        <div class="friend bet">
+          <input type="radio" name="inp-radio" id="inp-radio-02">
+          <label for="inp-radio-02">1 hour walk</label>
+          <span>$49</span>
+        </div>
+      </div>
+      <!-- App Form -->
+      <form class="app-form">
+        <input type="text" id="inp-text" placeholder="Type a message…"></input>
+        <button type="submit" id="btn-submit"></button>
+      </form>
+    </div>
+    <!-- Intro Container -->
+    <section class="intro">
+      <h1>Simple booking</h1>
+      <p>
+        Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/LucasWeidas" target="_blank">Lucas Weidas</a>.
+    </p>
+  </footer>
+</body>
+</html>

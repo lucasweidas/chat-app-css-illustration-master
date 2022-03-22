@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-text-01: hsl(276, 100%, 81%);
+  --clr-text-02: hsl(276, 55%, 52%);
+  --clr-text-03: hsl(271, 15%, 43%);
+  --clr-text-04: hsl(206, 6%, 79%);
+  --clr-text-05: hsl(271, 36%, 24%);
+  --clr-text-06: hsl(270, 7%, 64%);
+}
