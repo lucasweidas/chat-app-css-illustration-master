@@ -14,13 +14,15 @@
       <!-- App Header -->
       <div class="app-header">
         <div class="card">
-          <span class="card__arrow-left"></span>
+          <button class="card__btn-arrow"></button>
           <section class="card-user">
             <h2>Samuel Green</h2>
             <p>Available to Walk</p>
             <img src="images/avatar.jpg" alt="Samuel Green">
           </section>
-          <span class="card__ellipsis"></span>
+          <button class="card__btn-ellipsis">
+            <span></span>
+          </button>
         </div>
       </div>
       <!-- App Messages -->
@@ -45,12 +47,12 @@
           <label for="inp-radio-02">1 hour walk</label>
           <span>$49</span>
         </div>
+        <!-- App Form -->
+        <form class="app-form">
+          <input type="text" id="inp-text" placeholder="Type a message…"></input>
+          <button type="submit" id="btn-submit"></button>
+        </form>
       </div>
-      <!-- App Form -->
-      <form class="app-form">
-        <input type="text" id="inp-text" placeholder="Type a message…"></input>
-        <button type="submit" id="btn-submit"></button>
-      </form>
     </div>
     <!-- Intro Container -->
     <section class="intro">
