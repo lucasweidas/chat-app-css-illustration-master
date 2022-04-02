@@ -23,10 +23,14 @@
   --clr-app-bg: hsl(270, 20%, 96%);
   --clr-body-bg: hsl(0, 0%, 98%);
   --clr-submit-btn-bg: hsl(271, 36%, 24%);
-  --clr-radio-btn-ol: hsl(289, 100%, 72%);
+  --clr-radio-btn-bd: hsl(289, 100%, 72%);
+  --clr-bg-chat-l: hsla(276, 100%, 81%, 0.2);
+  --clr-bg-chat-r: var(--clr-white);
+  --clr-shadow-chat-r: hsla(0, 0%, 0%, 0.05);
 
   --ff-default: 'Rubik', sans-serif;
   --width-bg-image: clamp(50%, 5vw, 500px);
+  --transition-fast: ease 200ms;
 }
 
 /****************************************/
@@ -96,7 +100,8 @@ button {
   column-gap: 0.5rem;
 }
 
-.card__btn-arrow {
+.card__btn-arrow,
+.card__btn-ellipsis {
   width: 12px;
   height: 20px;
 }
@@ -147,7 +152,195 @@ button {
 }
 
 .card__btn-ellipsis {
-  
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-inline-start: auto;
+}
+
+.card__btn-ellipsis span,
+.card__btn-ellipsis::before,
+.card__btn-ellipsis::after {
+  display: block;
+  width: 2px;
+  height: 2px;
+  background-color: var(--clr-white);
+  opacity: 0.8;
+}
+
+.card__btn-ellipsis::before,
+.card__btn-ellipsis::after {
+  content: '';
+  position: absolute;
+}
+
+.card__btn-ellipsis::before {
+  top: 5px;
+}
+
+.card__btn-ellipsis::after {
+  bottom: 5px;
+}
+
+/* App Chat Container */
+.app-chat {
+  height: calc(100% - 66px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding: 0.625rem 0.5rem;
+}
+
+.message {
+  font-size: 0.5rem;
+  width: fit-content;
+  max-width: 8rem;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+}
+
+.message:nth-child(2),
+.message:nth-child(5) {
+  margin-block-end: 0.5rem;
+}
+
+.friend.message {
+  color: var(--clr-text-02);
+  border-bottom-left-radius: 0.25rem;
+  background-color: var(--clr-bg-chat-l);
+}
+
+.images {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.images img {
+  width: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.user {
+  align-self: flex-end;
+}
+
+.user.message {
+  color: var(--clr-text-03);
+  border-bottom-right-radius: 0.25rem;
+  background-color: var(--clr-bg-chat-r);
+  box-shadow: 0 2px 8px var(--clr-shadow-chat-r);
+}
+
+.bet {
+  max-width: 10rem;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.5rem;
+  color: var(--clr-white);
+  background-image: linear-gradient(to right, var(--clr-light-magenta), var(--clr-light-violet));
+  border-radius: 0.625rem 0.625rem 0.625rem 0.25rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+.bet input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+}
+
+.bet label {
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+  padding-inline-start: 1.25rem;
+}
+
+.bet label::before {
+  content: '';
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-55%);
+  border: 1px solid var(--clr-radio-btn-bd);
+  border-radius: 50%;
+  padding: 0.125rem;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.bet label:hover::before {
+  border-color: var(--clr-white);
+}
+
+.bet input[type='radio']:checked ~ label::before {
+  border-color: var(--clr-white);
+  background-color: var(--clr-white);
+  background-clip: content-box;
+}
+
+.bet span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-inline-start: auto;
+}
+
+/* App Form Container */
+.app-form {
+  width: 100%;
+  height: 2.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-white);
+  border-radius: 1.063rem;
+  padding: 0.313rem;
+  /* margin-block-start: 0.5rem; */
+  margin-block-start: auto;
+}
+
+#inp-text {
+  font-size: 0.625rem;
+  border: none;
+  padding-inline-start: 0.813rem;
+}
+
+#inp-text:focus-visible {
+  outline: none;
+}
+
+#inp-text::placeholder {
+  color: var(--clr-text-04);
+}
+
+#btn-submit {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  background-color: var(--clr-submit-btn-bg);
+  border-radius: 50%;
+}
+
+#btn-submit::before,
+#btn-submit::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 8px;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: var(--clr-white);
+}
+
+#btn-submit::before {
+  transform: rotate(50deg) translate(3px, -2px);
+}
+
+#btn-submit::after {
+  transform: rotate(120deg) translate(-3px, 2px);
 }
 
 /****************************************/
