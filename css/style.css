@@ -338,6 +338,7 @@ button {
 #app-form__txt {
   width: calc(100% - 1.75rem);
   height: 0.875rem;
+  font-family: var(--ff-default);
   font-size: 0.625rem;
   border: none;
   padding-inline-start: 0.813rem;
