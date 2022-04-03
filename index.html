@@ -7,6 +7,7 @@
   <title>Frontend Mentor | Chat App Illustration</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <main>
@@ -26,7 +27,7 @@
       </div>
       <!-- App Messages -->
       <div class="app-chat">
-        <p class="friend message">That sounds great. I’d be happy with that.</p>
+        <p class="friend message">That sounds great. I’d be happy to discuss more.</p>
         <p class="friend message">Could you send over some pictures of your dog, please?</p>
         <div class="user images">
           <img src="images/dog-image-1.jpg" alt="">
@@ -46,12 +47,12 @@
           <label for="inp-radio-02">1 hour walk</label>
           <span>$49</span>
         </div>
-        <!-- App Form -->
-        <form class="app-form">
-          <input type="text" id="inp-text" placeholder="Type a message…"></input>
-          <button type="submit" id="btn-submit"></button>
-        </form>
       </div>
+      <!-- App Form -->
+      <form class="app-form">
+        <textarea id="app-form__txt" placeholder="Type a message…"></textarea>
+        <button type="submit" id="app-form__btn"></button>
+      </form>
     </div>
     <!-- Intro Container -->
     <section class="intro">
