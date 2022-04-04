@@ -302,6 +302,7 @@ button {
   transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
+.bet input[type='radio']:focus ~ label::before,
 .bet label:hover::before {
   border-color: var(--clr-white);
 }
