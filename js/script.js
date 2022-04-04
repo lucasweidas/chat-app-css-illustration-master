@@ -23,6 +23,7 @@ function addNewMessage(txtValue) {
   p.classList.add('user', 'message');
   p.innerText = txtValue;
   appChat.appendChild(p);
+  formTxt.value = '';
 }
 
 appForm.addEventListener('submit', verifySubmit);
